@@ -4,6 +4,10 @@ import { AuthUserController } from './controllers/user/AuthUserController';
 
 const router = Router();
 
+router.get('/',  (request, resp) => {
+  resp.json({ ok: true })
+})
+
 // --ROTAS USERS --
 router.post('/users', new CreateUserController().handle)
 
